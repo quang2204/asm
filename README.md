@@ -1,99 +1,126 @@
-{
-  "editor.fontSize": 24,
-  "editor.formatOnSave": true,
-  "git.autofetch": true,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+.tab-border-top-container {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1.3px;
+  width: 100% !important;
+  height: calc(100% - 3px) !important;
+  background-color: transparent !important;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px #adbbff);
+}
 
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.inlineSuggest.enabled": true,
-  "editor.formatOnSave": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "vue-html": "html"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "eslint.alwaysShowStatus": true,
-  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.wordWrapColumn": 100,
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 100,
-  "html.format.wrapAttributesIndentSize": 120,
-  "editor.lineHeight": 30,
-  "gitlens.views.commitDetails.files.layout": "tree",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "background.enabled": true,
-  "background.loop": false,
-  "background.useDefault": false,
-  "background.useFront": false,
-  "background.style": {
-    "content": "''",
-    "pointer-events": "none",
-    "position": "absolute",
-    "z-index": "99999",
-    "width": "100%",
-    "height": "100%",
-    "margin-left": "0%",
-    "background-position": "right",
-    "background-size": "cover",
+.tab-border-top-container:before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  animation: spinner 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  background: conic-gradient(from 0deg at 50% 51.35%,
+      rgba(185, 215, 243, 0) 0deg,
+      rgba(185, 215, 243, 0) 289.4deg,
+      #ffb86c 318.05deg,
+      #ff65f2 1turn),
+    conic-gradient(from 180deg at 50% 51.35%,
+      rgba(185, 215, 243, 0) 0deg,
+      rgba(185, 215, 243, 0) 287.46deg,
+      #20e3b2 325.02deg,
+      #00aefd 1turn);
+}
 
-    "opacity": 0.3
-  },
+@keyframes spinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
 
+.monaco-decoration-itemBadge--qbi6iu::after {
+  content: "1";
+  color: aquamarine;
+}
+.monaco-pane-view .split-view-view:first-of-type>.pane>.pane-header  {
 
-  "background.customImages": [
-    "https://i.pinimg.com/564x/b5/11/17/b51117774a66fe2fefe1a089046dd961.jpg"
-  ],
-  "background.panelBackgrounds": [
-    "https://i.pinimg.com/564x/1a/9d/5a/1a9d5a6921e5f7326043a925f7844f73.jpg"
-  ],
-  "background.sidebarBackgrounds": [
-    "https://i.pinimg.com/564x/b5/11/17/b51117774a66fe2fefe1a089046dd961.jpg"
-  ],
-  "editor.fontFamily": "Consolas, 'Courier New', monospace,SF Mono",
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "terminal.integrated.env.windows": {},
+  animation: colorAnimation 5s infinite;
 
-  "powermode.enabled": true,
-  "powermode.combo.location": "off",
-  "powermode.shake.enabled": false,
-  "powermode.combo.counterSize": 5,
-  "powermode.combo.timeout": 1,
-  "powermode.explosions.size": 5,
-  "vscodeGoogleTranslate.preferredLanguage": "Vietnamese",
-  "googleTranslateExt.replaceText": true,
-  "php.validate.executablePath": "file:///C:/php.exe",
+}
+.tab.active  {
+  border-radius: 10px !important;
+  box-shadow: inset 0 1px 1px 0 rgba(199, 211, 234, 0.12),
+    inset 0 24px 48px 0 rgba(199, 211, 234, 0.05),
+    0 24px 32px 0 rgba(6, 6, 14, 0.7);
+  animation: colorAnimation 5s infinite;
 
-  "explorer.confirmDelete": false,
-  "[php]": {
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
-  },
-  "diffEditor.renderSideBySide": false,
-  "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true
-  },
+}
+.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab>.tab-actions .action-label.codicon:hover {
 
-  "files.autoSave": "afterDelay",
-  "tabnine.experimentalAutoImports": true,
-  "php-intellisense.trace.server": "messages",
-  "php.files.exclude": [],
-  "vscode_custom_css.imports": ["file:///C:/custom.css"],
-  "workbench.colorTheme": "Evondev Dracula High Contrast",
-  "php.suggest.basic": true,
-  "php.validate.enable": true,
-  "settingsSync.ignoredExtensions": ["devsense.phptools-vscode"],
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.layoutControl.enabled": false
+  box-shadow: inset 0 1px 1px 0 rgb(199 211 234 / 12%), inset 0 24px 48px 0 rgb(199 211 234 / 5%), 0 24px 32px 0 rgb(6 6 14 / 70%);
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.active>.tab-actions .action-label.codicon {
+
+  box-shadow: inset 0 1px 1px 0 rgb(199 211 234 / 12%), inset 0 24px 48px 0 rgb(199 211 234 / 5%), 0 24px 32px 0 rgb(6 6 14 / 70%);
+}
+
+.tab.active .label-name {
+  font-size: 13.5px !important;
+
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #ff65f2;
+  }
+
+  25% {
+    color: #87CEEB;
+  }
+
+  50% {
+    color: #20e3b2;
+
+  }
+
+  75% {
+    color: #5be2dc;
+  }
+
+  100% {
+    color: #ff65f2;
+  }
+}
+
+.show-file-icons .monaco-tl-twistie.collapsible:not(.collapsed)+.monaco-tl-contents .folder-icon::before {
+  content: ' ';
+  background-image: url(https://media-public.canva.com/f4vwU/MAF-exf4vwU/1/t.png);
+
+}
+
+.codicon-tree-item-expanded:before {
+  content: '3';
+  font-size: 1px;
+  background-image: url('https://media-public.canva.com/eCgGY/MAEWMNeCgGY/1/t.png');
+  background-repeat: no-repeat;
+  background-size: 11px;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+}
+
+.show-file-icons .folder-icon::before {
+  content: ' ';
+  background-image: url(https://media-public.canva.com/e8dTI/MAFoUWe8dTI/1/t.png);
+
 }
